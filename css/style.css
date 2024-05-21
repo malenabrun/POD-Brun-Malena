@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@700&family=Jost:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+nav,
+header,
+main
+{
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+header {
+    height: 62vh;
+    margin: 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+/* mostrar es la clase que utilizamos 
+en el código de js */
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 19vh;
+    left: 0vw;
+    background-color: #315a64;
+    width: 100vw;
+    padding: 2vw;
+}
+
+nav {
+    color: #ffffff;
+    background-color: #315a64;
+    height: 19vh;
+    padding: 0 8.33vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav div {
+    width: 18%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a,
+nav h1,
+header h3,
+header h1 {
+    line-height: 125%;
+    vertical-align: top;
+    font-size: 40px;
+}
+
+header h3 {
+    color: #E26D5C;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 16px;
+}
+
+
+main section div {
+    width: 45.83%;
+    margin-bottom: 7%;
+}
+
+section div img {
+    width: 100%;
+    margin: 0%;
+    border: 3px solid #315a64;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+main  section:first-child {
+justify-content: space-between;
+display: flex;
+flex-wrap: wrap;
+}
+
+nav h1 {
+    color: #ffffff;
+    transform: translateX(0px);
+    font-weight: 500;
+    margin: 0;
+    transition: all 3000ms;
+}
+
+nav h1:hover {
+    color: #283618;
+    transform: translateX(130px);
+    transition-delay: 500ms;
+}
+
+header h1 {
+    font-family: 'Geologica', serif;
+    color: #30343F;
+    animation-name: miMovimiento;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes miMovimiento {
+    from {
+        color: #315a64;
+    } to {
+        color: #E26D5C;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+header p,
+nav a {
+    font-size: 20px;
+}
+
+nav a{
+        color: #ffffff;
+}
+
+nav span {
+    display: none;
+}
+/* lo hago desaparecer */
+
+.icon-menu {
+    /* color: red; */
+    font-size: 6vw;
+}
+
+.icon-menu:hover {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    /* implementamos la mano */
+}
+
+main div a {
+    text-decoration: none;
+    color: #315a64;
+    margin-bottom: 30%;
+    text-decoration: none;
+}
+
+main div a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    main section div {
+        width: 100%;
+    }
+  }
+
+@media (max-width: 768px) {
+    nav div {
+        display: none;
+    }
+    /* lo hago desaparecer */
+
+    nav span {
+        display: inline;
+    }
+    /* lo vuelo a mostrar */
+}
+
+footer{
+    color: #ffffff;
+    background-color: #315a64;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    margin-top: 10%;
+}
